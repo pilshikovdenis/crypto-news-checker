@@ -49,9 +49,7 @@ public class ParseLatestNewsTask {
                 System.out.println("short_text: " + short_text);
                 System.out.println("url: " + url);
 
-                News news = new News();
-                news.setTitle(title);
-                news.setShortText(short_text);
+                News news = new News(title, short_text, url);
                 newsService.save(news);
             }
 
