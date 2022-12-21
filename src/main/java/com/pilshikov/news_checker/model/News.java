@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "news")
 @Getter
 @Setter
 public class News {
@@ -13,11 +12,14 @@ public class News {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(length = 500)
     private String title;
 
-    @Column(name = "short_text")
+    @Column(length = 500)
+
     private String shortText;
 
+    @Column(length = 500)
     private String url;
 
     public News() {
